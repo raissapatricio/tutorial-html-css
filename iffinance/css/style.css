@@ -5,12 +5,12 @@ html, body{
 }
 
 body{
-    background: #5f4e4e;
+    background: #1a1a1a;
 }
 
 header {
     height: 90px;
-    background: #fff0f0;
+    background: #8d8d8d;
 }
 
 .wrapper {
@@ -37,7 +37,7 @@ header .wrapper{
 
 #logo h1{
     margin: 0;
-    color: #006888;
+    color: #fd0000;
 }
 
 #logo h1 span{
@@ -90,11 +90,11 @@ th, td {
 }
 
 tr:nth-child(even){
-    background-color: #06a700
+    background-color: #a7000094
 }
 
 tr:nth-child(odd){
-    background-color: #0d00c9
+    background-color: #887f7f
 }
 
 tr:nth-child(1) {
@@ -116,4 +116,68 @@ border-right: #cdcdcd;
 form{
     display: flex;
     flex-direction: column;
+}
+
+select{
+    width: fit-content;
+}
+
+input[type=submit], button{
+    background-color: #F19E39;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type=submit]:hover, button: hover{
+    background-color: #F19E39;
+}
+
+.flex-bt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.modal{
+    background-color: #101010af;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal main{
+    background-color: #2d2d2d;
+    width: 700px;
+    height: 500px;
+    border-radius: 20px;
+    padding: 20px;
+}
+.modal main header{
+    backgorund: none;
+    height:auto;
+}
+
+.modal main h1{
+    margin: 0;
+
+}
+
+.modal main header button{
+    background: none;
+    color: #fff;
+}
+
+.modal main header button :hover{
+    background-color: #000;
 }

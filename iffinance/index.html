@@ -5,6 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>IFFinance</title>
         <link rel="stylesheet" href="./css/style.css">
+        <script>
+            const nome = "Raissa"
+            const sobreNome = "Patricio"
+
+            const campoEscolhido = 'altura'
+
+            function nomeCompleto(nome, sobreNome) {
+                return ´${nome} {sobreNome}`
+            }
+
+            conCompleto = function (nome, sobreNome) {
+                return ´${nome} {sobreNome}`
+            }
+        </script>
     </head>
     <body>
         <header>
@@ -28,8 +42,20 @@
         </header>
         <main>
             <div class="wrapper">
+                <div class="flex-bt align-center">
                 <h1>Home</h1>
+                <button style="height: 40px;">+ Adicionar</button>
+                </div>
             </div>
         </main>
+        <div class="modal">
+        <main>
+            <header class="flex-bt align-center">
+                    <h1>Adicionar Ação</h1>
+                    <button>X</button>
+            </header>
+        </main>
+        </div>
     </body>
+    <script src="./js/main.js"></script>
 </html>
