@@ -5,24 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>IFFinance</title>
         <link rel="stylesheet" href="./css/style.css">
-        <script>
-            const nome = "Raissa"
-            const sobreNome = "Patricio"
-
-            const campoEscolhido = 'altura'
-
-            function nomeCompleto(nome, sobreNome) {
-                return ´${nome} {sobreNome}
-            }
-
-            const nCompleto = function (nome, sobreNome) {
-                return ´${nome} {sobreNome}`
-            }
-
-            const nmCompleto = (nome, sobreNome) => {
-                return `${nome} 
-            }
-        </script>
     </head>
     <body>
         <header>
@@ -48,16 +30,46 @@
             <div class="wrapper">
                 <div class="flex-bt align-center">
                 <h1>Home</h1>
-                <button style="height: 40px;">+ Adicionar</button>
+                <button style="height: 40px;" onclick="openModal()">+ Adicionar</button>
+                </div>
+                <div id="card-list">
+                    <div class="card-ticker">
+                        <header>
+                            <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed3d547-94ff-48e1-9f20-8c14a7030a02_2000x2000.jpeg" alt="Logo">
+                            <h4>Apple</h4>
+                            <span>AAPL</span>
+                        </header>
+                        <main>
+                            <p>Valor: <span style="color: #03da03;">150,00<span>▼ ▲</span></p>
+                        </main>
+                        <footer>
+                            <p>Quantidade: <span>20</span></p>
+                            <p>Posição: <span>R$ 23.434,34</span></p>
+                        </footer>
+                    </div>
                 </div>
             </div>
         </main>
-        <div class="modal">
+        <div class="modal" onclick="closeModal(event)">
         <main>
             <header class="flex-bt align-center">
                     <h1>Adicionar Ação</h1>
-                    <button on click>X</button>
+                    <button onclick="closeModal()">X</button>
             </header>
+            <form onsubmit="handleSubmitAddTicker(event)">
+                <label for="url">URL Logo:</label>
+                <input type="text" id="urlLogo" name="urlLogo">
+                <label for="nameCompany">Nome da Empresa:</label>
+                <input type="text" id="nameCompany" name="nameCompany">
+                <label for="ticker">Símbolo:</label>
+                <input type="text" id="ticker" name="ticker">
+                <label for="quantity">Quantidade:</label>
+                <input type="text" id="quantity" name="quantity">
+                <label for="closedValue">Valor da Ação:</label>
+                <input type="text" id="closedValue" name="closedValue">
+
+                <input type="submit" value="Adicionar" style="width: 50%;">
+            </form>
         </main>
         </div>
     </body>
